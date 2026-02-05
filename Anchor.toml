@@ -3,7 +3,7 @@ seeds = false
 skip-lint = false
 
 [programs.devnet]
-solagent = "SAGNTeco1111111111111111111111111111111111"
+solagent = "FDBu2qdatZd7J1TiDTjCbzNtjqwuJi25UPY7qUdBBFNQ"
 
 [registry]
 url = "https://api.apr.dev"

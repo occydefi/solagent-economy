@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use anchor_lang::system_program;
 
-declare_id!("SAGNTeco1111111111111111111111111111111111");
+declare_id!("FDBu2qdatZd7J1TiDTjCbzNtjqwuJi25UPY7qUdBBFNQ");
 
 /// SolAgent Economy Protocol
 /// Native Solana infrastructure for AI agent identity, reputation,
@@ -594,7 +594,7 @@ pub struct PayForService<'info> {
 pub struct ReleasePayment<'info> {
     #[account(
         mut,
-        has_one = payer @ SolAgentError::Unauthorized,
+        constraint = payment.payer == payer_agent.key() @ SolAgentError::Unauthorized,
     )]
     pub payment: Account<'info, Payment>,
     /// CHECK: escrow PDA
