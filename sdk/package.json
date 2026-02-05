@@ -1,0 +1,48 @@
+{
+  "name": "@solagent/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the SolAgent Economy Protocol - AI agent identity, reputation, payments, and marketplace on Solana",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "solana",
+    "ai-agent",
+    "solagent",
+    "anchor",
+    "blockchain",
+    "marketplace",
+    "reputation",
+    "streaming-payments"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.0",
+    "@solana/web3.js": "^1.95.0",
+    "bn.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.5",
+    "typescript": "^5.4.0"
+  },
+  "peerDependencies": {
+    "@coral-xyz/anchor": ">=0.29.0",
+    "@solana/web3.js": ">=1.90.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solagent/sdk"
+  }
+}
